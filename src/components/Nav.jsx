@@ -2,6 +2,7 @@ import React from 'react';
 import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, CubeIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { NavLink } from 'react-router-dom';
 
 
 const navigation = [
@@ -26,21 +27,21 @@ export default function Nav() {
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-center">
+                <div className="flex h-16 items-center justify-between lg:justify-center">
                   <div className="flex items-center">
                     <div className="flex-shrink-0 text-white">
                         <CubeIcon className='w-12 h-12'></CubeIcon>
                     </div>
                     <div className='ml-7'>
-                      <h2 className='text-white text-3xl font-bold space-x-3 tracking-wider mr-28'>QUIZ HUB</h2>
+                      <h2 className='text-white text-3xl font-bold space-x-3 tracking-wider lg:mr-28'>QUIZ HUB</h2>
                     </div>
                     
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4 text-2xl font-semibold">
                         {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
+                          <NavLink
+                            key={item.id}
+                            to={item.path}
                             className={classNames(
                               item.current
                                 ? 'bg-orange-500 text-white'
@@ -50,7 +51,7 @@ export default function Nav() {
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </NavLink>
                         ))}
                       </div>
                     </div>
@@ -73,9 +74,9 @@ export default function Nav() {
                 <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                   {navigation.map((item) => (
                     <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
+                      key={item.id}
+                      
+                      to={item.path}
                       className={classNames(
                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
@@ -90,22 +91,6 @@ export default function Nav() {
             </>
           )}
         </Disclosure>
-
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Organize Live Multiplayer Trivia Quiz for Your Event!</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            {/* Replace with your content */}
-            <div style={{ backgroundColor: 'blue', height: '500px'
-            }}>
-              Hello World
-            </div>
-            {/* /End replace */}
-          </div>
-        </main>
       </div>
     </>
   )
