@@ -1,19 +1,20 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-
-
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import QuizDetails from "./QuizDetails";
 
 const Quiz = () => {
-  const data = useLoaderData()
-  console.log(data);
- 
+  const data = useLoaderData();
+  const quizzes = data.data.questions;
+  console.log(quizzes);
+
   return (
-    <>
-    quiz 
-    </>
+    <div className="bg-gray-200">
+      <h2>Quiz {quizzes.length}</h2>
+      {quizzes.map((quiz) => (
+        <QuizDetails key={quiz.id} quiz={quiz}></QuizDetails>
+      ))}
+    </div>
   );
-    
-    
 };
 
 export default Quiz;
