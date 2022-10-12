@@ -5,11 +5,9 @@ import QuizDetails from "./QuizDetails";
 const Quiz = () => {
   const data = useLoaderData();
   const quizzes = data.data.questions;
-  console.log(quizzes);
-
   return (
     <div className="bg-gray-200">
-      <h2>Quiz {quizzes.length}</h2>
+      <h2 className="py-24">Quiz </h2>
       {quizzes.map((quiz) => (
         <QuizDetails key={quiz.id} quiz={quiz}></QuizDetails>
       ))}

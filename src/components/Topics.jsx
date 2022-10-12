@@ -7,7 +7,7 @@ const Topics = () => {
 
   return (
     <div className="sm:mx-3 md:mx-11 lg:mx-28">
-      <h2 className="text-4xl font-semibold text-slate-700 my-12">
+      <h2 className="text-4xl font-semibold text-slate-700 my-24">
         Quiz Topics
       </h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-4 md:gap-6 lg:gap-7 my-14">

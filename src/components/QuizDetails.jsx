@@ -1,103 +1,30 @@
 import React from 'react';
-
-// const QuizDetails = ({quiz}) => {
-//  const {id, options, question, correctAnswer} = quiz;
-
-//     return (
-//         <div>
-//             <h3>{question}</h3>
-//             <p>{options}</p>
-//         </div>
-//     );
-// };
-
-import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
+import { EyeSlashIcon } from '@heroicons/react/24/solid'
 
-const plans = [
-  {
-    name: 'Startup',
-    ram: '12GB',
-    cpus: '6 CPUs',
-    disk: '160 GB SSD disk',
-  },
-  {
-    name: 'Business',
-    ram: '16GB',
-    cpus: '8 CPUs',
-    disk: '512 GB SSD disk',
-  },
-  {
-    name: 'Enterprise',
-    ram: '32GB',
-    cpus: '12 CPUs',
-    disk: '1024 GB SSD disk',
-  },
-]
 
 const QuizDetails = ({quiz}) => {
-  const [selected, setSelected] = useState(plans[0])
   const {id, options, question, correctAnswer} = quiz;
 
+
+
+
   return (
-    <div className="w-full px-4 py-16 ">
-      <div className="mx-auto w-full max-w-md">
-        <RadioGroup value={selected} onChange={setSelected}>
+    <div className="w-full px-4 py-16">
+      <div className="mx-auto w-full max-w-2xl p-12 bg-white rounded shadow-xl">
+        <RadioGroup>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="space-y-2">
-            {plans.map((plan) => (
-              <RadioGroup.Option
-                key={plan.name}
-                value={plan}
-                className={({ active, checked }) =>
-                  `${
-                    active
-                      ? 'ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-sky-300'
-                      : ''
-                  }
-                  ${
-                    checked ? 'bg-sky-900 bg-opacity-75 text-white' : 'bg-white'
-                  }
-                    relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`
+              <h3 className='text-lg font-semibold'>{question}</h3>
+              <div className='flex justify-end'>
+                <EyeSlashIcon className='w-6 h-6'>{correctAnswer}</EyeSlashIcon>
+            </div>
+              <div className=" grid grid-cols-1 gap-3">
+              {
+                    options.map(option =><p className='bg-gray-200 px-9 py-3 rounded font-semibold text-gray-800 hover:bg-orange-600 hover:text-white duration-700'><input className='' type="radio" name="radio" id="" /><span className='px-12'>{option}</span></p>)
                 }
-              >
-                {({ active, checked }) => (
-                  <>
-                    <div className="flex w-full items-center justify-between">
-                      <div className="flex items-center">
-                        <div className="text-sm">
-                          <RadioGroup.Label
-                            as="p"
-                            className={`font-medium  ${
-                              checked ? 'text-white' : 'text-gray-900'
-                            }`}
-                          >
-                            {plan.name}
-                          </RadioGroup.Label>
-                          <RadioGroup.Description
-                            as="span"
-                            className={`inline ${
-                              checked ? 'text-sky-100' : 'text-gray-500'
-                            }`}
-                          >
-                            <span>
-                              {plan.ram}/{plan.cpus}
-                            </span>{' '}
-                            <span aria-hidden="true">&middot;</span>{' '}
-                            <span>{plan.disk}</span>
-                          </RadioGroup.Description>
-                        </div>
-                      </div>
-                      {checked && (
-                        <div className="shrink-0 text-white">
-                          <CheckIcon className="h-6 w-6" />
-                        </div>
-                      )}
-                    </div>
-                  </>
-                )}
-              </RadioGroup.Option>
-            ))}
+                
+              </div>
           </div>
         </RadioGroup>
       </div>
@@ -119,6 +46,7 @@ function CheckIcon(props) {
     </svg>
   )
 }
+
 
 
 export default QuizDetails;

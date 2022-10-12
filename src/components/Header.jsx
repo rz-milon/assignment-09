@@ -1,13 +1,13 @@
 import { CubeIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div class="bg-blue-900">
-      <div class="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="relative">
+      <div class="bg-blue-900 fixed top-0 left-0 right-0">
+      <div class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div class="relative flex items-center justify-between">
           <Link
             to="/home"
@@ -38,15 +38,6 @@ const Header = () => {
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Topics
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/quiz"
-                aria-label="Quiz"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
-              >
-                Quiz
               </Link>
             </li>
             <li>
@@ -147,15 +138,6 @@ const Header = () => {
                       </li>
                       <li className="hover:bg-gray-200 rounded ">
                         <Link
-                          to="/quiz"
-                          aria-label="Quiz"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
-                        >
-                          Quiz
-                        </Link>
-                      </li>
-                      <li className="hover:bg-gray-200 rounded ">
-                        <Link
                           to="/statistics"
                           aria-label="Statistics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
@@ -180,6 +162,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
