@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     
@@ -6,42 +7,17 @@ const Home = () => {
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="lg:pr-10">
-          <a
-            href="/"
-            aria-label="Go Home"
-            title="Logo"
-            className="inline-block mb-5"
-          >
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-              <svg
-                className="w-10 h-10 text-deep-purple-accent-400"
-                stroke="currentColor"
-                viewBox="0 0 52 52"
-              >
-                <polygon
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                  points="29 13 14 29 25 29 23 39 38 23 27 23"
-                />
-              </svg>
-            </div>
-          </a>
           <h5 className="mb-4 text-4xl font-extrabold leading-none">
-            The quick, brown fox
-            <br className="hidden md:block" />
-            jumps over{' '}
+            More Programing<br className="hidden md:block" />
+            Quiz Questions{' '}
             <span className="inline-block text-deep-purple-accent-400">
-              a lazy dog
+            and Answers <span className='text-yellow-500 text-5xl'>!!!</span>
             </span>
           </h5>
           <p className="mb-6 text-gray-900">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae explicabo. Sed ut perspiciatis unde omnis iste natus error sit
-            voluptatem totam rem aperiam, eaque ipsa quae explicabo.
+          A good programing knowledge quiz has a lot to offer. They’re fun, keep your brain sharp and best of all, they suit any occasion.
           </p>
+          <button className='bg-blue-900 text-white font-semibold py-2 px-10 my-10 hover:bg-amber-400 hover:text-black duration-700'><Link to='/topics' >Let’s Start</Link></button>
           <hr className="mb-5 border-gray-300" />
           <div className="flex items-center space-x-4">
             <a
@@ -79,12 +55,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div>
-          <img
-            className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-            alt=""
-          />
+        <div className="bg-[url('/public/img/education-day.jpg')] object-cover w-full h-56 rounded bg-no-repeat shadow-lg sm:h-96">
         </div>
       </div>
     </div>

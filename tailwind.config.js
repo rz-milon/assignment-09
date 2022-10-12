@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/public/img/education-day.jpg')",
+      }
+    }
   },
   plugins: [],
 }

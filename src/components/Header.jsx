@@ -17,7 +17,7 @@ const Header = () => {
             class="inline-flex items-center"
           >
             <div className="flex-shrink-0 text-white">
-                        <CubeIcon className='w-12 h-12'></CubeIcon>
+                        <CubeIcon className='w-8 h-8'></CubeIcon>
                     </div>
             <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
               QUIZ HUB
@@ -29,7 +29,7 @@ const Header = () => {
                 to="/home"
                 aria-label="Home"
                 title="Home"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300 "
               >
                 Home
               </Link>
@@ -39,9 +39,9 @@ const Header = () => {
                 to="/topics"
                 aria-label="Topics"
                 title="Topics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
-                Tpoics
+                Topics
               </Link>
             </li>
             <li>
@@ -49,7 +49,7 @@ const Header = () => {
                 to="/quiz"
                 aria-label="Quiz"
                 title="Quiz"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Quiz
               </Link>
@@ -59,7 +59,7 @@ const Header = () => {
                 to="/statistics"
                 aria-label="Statistics"
                 title="Statistics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Statistics
               </Link>
@@ -69,7 +69,7 @@ const Header = () => {
                 to="/blog"
                 aria-label="Blog"
                 title="Blog"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Blog
               </Link>
@@ -79,7 +79,7 @@ const Header = () => {
             <button
               aria-label="Open Menu"
               title="Open Menu"
-              class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline border border-white"
+              class="p-2 -mr-1 transition duration-700 rounded focus:outline-none focus:shadow-outline border border-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg class="w-5 text-white" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ const Header = () => {
                         class="inline-flex items-center"
                       >
                         <div className="flex-shrink-0 text-blue-900">
-                        <CubeIcon className='w-12 h-12'></CubeIcon>
+                        <CubeIcon className='w-8 h-8'></CubeIcon>
                     </div>
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                           QUIZ HUB
@@ -120,7 +120,7 @@ const Header = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="p-2 -mt-2 -mr-2 transition duration-700 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -140,7 +140,7 @@ const Header = () => {
                           to="/home"
                           aria-label="Home"
                           title="Home"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Home
                         </Link>
@@ -150,7 +150,7 @@ const Header = () => {
                           to="/topics"
                           aria-label="Topics"
                           title="Topics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Topics
                         </Link>
@@ -160,7 +160,7 @@ const Header = () => {
                           to="/statistics"
                           aria-label="Statistics"
                           title="Statistics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Statistics
                         </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                           to="/blog"
                           aria-label="Blog"
                           title="Blog"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Blog
                         </Link>
