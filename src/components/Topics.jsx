@@ -4,7 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 const Topics = () => {
   const data = useLoaderData();
   const topics = data.data;
-  console.log(topics);
 
   return (
     <div className="sm:mx-3 md:mx-11 lg:mx-28">
@@ -17,9 +16,7 @@ const Topics = () => {
             </div>
             <hr className="text-white font-bold order-4"/>
             <h3 className="text-2xl text-blue-700 font-bold my-3">{topic.name}</h3>
-            <button className="bg-amber-600 text-white font-semibold w-full py-2 px-10 rounded hover:bg-blue-500 duration-700">
-              Start Quiz
-            </button>
+            <Link to={`/quiz/${topic.id}`}> <button className="bg-amber-600 text-white font-semibold w-full py-2 px-10 rounded hover:bg-blue-500 duration-700">Start Quiz</button></Link>
           </div>
         ))}
       </div>

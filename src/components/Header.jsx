@@ -1,10 +1,9 @@
-import { CubeIcon } from '@heroicons/react/24/outline';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { CubeIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div class="bg-blue-900">
@@ -13,12 +12,11 @@ const Header = () => {
           <Link
             to="/home"
             aria-label="QUIZ HUB"
-            title="QUIZ HUB"
             class="inline-flex items-center"
           >
             <div className="flex-shrink-0 text-white">
-                        <CubeIcon className='w-8 h-8'></CubeIcon>
-                    </div>
+              <CubeIcon className="w-8 h-8"></CubeIcon>
+            </div>
             <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
               QUIZ HUB
             </span>
@@ -28,7 +26,6 @@ const Header = () => {
               <Link
                 to="/home"
                 aria-label="Home"
-                title="Home"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300 "
               >
                 Home
@@ -38,7 +35,6 @@ const Header = () => {
               <Link
                 to="/topics"
                 aria-label="Topics"
-                title="Topics"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Topics
@@ -48,7 +44,6 @@ const Header = () => {
               <Link
                 to="/quiz"
                 aria-label="Quiz"
-                title="Quiz"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Quiz
@@ -58,7 +53,6 @@ const Header = () => {
               <Link
                 to="/statistics"
                 aria-label="Statistics"
-                title="Statistics"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Statistics
@@ -68,7 +62,6 @@ const Header = () => {
               <Link
                 to="/blog"
                 aria-label="Blog"
-                title="Blog"
                 class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
               >
                 Blog
@@ -105,12 +98,11 @@ const Header = () => {
                       <Link
                         to="/home"
                         aria-label="QUIZ HUB"
-                        title="QUIZ HUB"
                         class="inline-flex items-center"
                       >
                         <div className="flex-shrink-0 text-blue-900">
-                        <CubeIcon className='w-8 h-8'></CubeIcon>
-                    </div>
+                          <CubeIcon className="w-8 h-8"></CubeIcon>
+                        </div>
                         <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                           QUIZ HUB
                         </span>
@@ -135,41 +127,46 @@ const Header = () => {
                   <nav>
                     <hr />
                     <ul class="space-y-4 border-b">
-                      <li className='hover:bg-gray-200 rounded '>
+                      <li className="hover:bg-gray-200 rounded ">
                         <Link
                           to="/home"
                           aria-label="Home"
-                          title="Home"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Home
                         </Link>
                       </li>
-                      <li className='hover:bg-gray-200 rounded '>
+                      <li className="hover:bg-gray-200 rounded ">
                         <Link
                           to="/topics"
                           aria-label="Topics"
-                          title="Topics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Topics
                         </Link>
                       </li>
-                      <li className='hover:bg-gray-200 rounded '>
+                      <li className="hover:bg-gray-200 rounded ">
+                        <Link
+                          to="/quiz"
+                          aria-label="Quiz"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
+                        >
+                          Quiz
+                        </Link>
+                      </li>
+                      <li className="hover:bg-gray-200 rounded ">
                         <Link
                           to="/statistics"
                           aria-label="Statistics"
-                          title="Statistics"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Statistics
                         </Link>
                       </li>
-                      <li className='hover:bg-gray-200 rounded '>
+                      <li className="hover:bg-gray-200 rounded ">
                         <Link
                           to="/blog"
                           aria-label="Blog"
-                          title="Blog"
                           class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
                         >
                           Blog
