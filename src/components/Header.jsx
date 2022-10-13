@@ -26,7 +26,7 @@ const Header = () => {
               <Link
                 to="/home"
                 aria-label="Home"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300 "
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300 "
               >
                 Home
               </Link>
@@ -35,7 +35,7 @@ const Header = () => {
               <Link
                 to="/topics"
                 aria-label="Topics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
               >
                 Topics
               </Link>
@@ -44,7 +44,7 @@ const Header = () => {
               <Link
                 to="/statistics"
                 aria-label="Statistics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
               >
                 Statistics
               </Link>
@@ -53,7 +53,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 aria-label="Blog"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-700 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
               >
                 Blog
               </Link>
@@ -63,7 +63,7 @@ const Header = () => {
             <button
               aria-label="Open Menu"
               title="Open Menu"
-              class="p-2 -mr-1 transition duration-700 rounded focus:outline-none focus:shadow-outline border border-white"
+              class="p-2 -mr-1 transition duration-300 rounded focus:outline-none focus:shadow-outline border border-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <svg class="w-5 text-white" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ const Header = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        class="p-2 -mt-2 -mr-2 transition duration-700 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="p-2 -mt-2 -mr-2 transition duration-300 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ const Header = () => {
                         <Link
                           to="/home"
                           aria-label="Home"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-300 hover:text-deep-purple-accent-400"
                         >
                           Home
                         </Link>
@@ -131,7 +131,7 @@ const Header = () => {
                         <Link
                           to="/topics"
                           aria-label="Topics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-300 hover:text-deep-purple-accent-400"
                         >
                           Topics
                         </Link>
@@ -140,7 +140,7 @@ const Header = () => {
                         <Link
                           to="/statistics"
                           aria-label="Statistics"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-300 hover:text-deep-purple-accent-400"
                         >
                           Statistics
                         </Link>
@@ -149,7 +149,7 @@ const Header = () => {
                         <Link
                           to="/blog"
                           aria-label="Blog"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-700 hover:text-deep-purple-accent-400"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-300 hover:text-deep-purple-accent-400"
                         >
                           Blog
                         </Link>

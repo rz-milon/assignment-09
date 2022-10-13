@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const Statistics = () => {
-    return (
-        <div>
-            <h3>Statistics</h3>
-        </div>
-    );
+const Statistics = ({id}) => {
+  console.log(id);
+  return (
+    <>
+
+    </>
+  );
 };
 
 export default Statistics;
