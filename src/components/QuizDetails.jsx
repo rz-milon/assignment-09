@@ -1,9 +1,32 @@
 import React from "react";
 import { RadioGroup } from "@headlessui/react";
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
+import { EyeIcon } from "@heroicons/react/24/solid";
+import { toast } from "react-toastify";
 
 const QuizDetails = ({ quiz }) => {
+
   const { id, options, question, correctAnswer } = quiz;
+  // console.log(correctAnswer);
+
+  const selectOption = (e) =>{
+    const selectItem = e.target.innerText;
+    // console.log("Click", e.target.innerText);
+    
+    if(selectItem === correctAnswer){
+      return toast.success('Correct Answer!', { autoClose: 500, position: toast.POSITION.TOP_CENTER })
+    }else{
+      return toast.warning('Incorrect Answer', { autoClose: 500, position: toast.POSITION.TOP_CENTER })
+    }
+  }
+
+  const viewAnswer = () =>{
+    const answer = correctAnswer;
+    // console.log(answer);
+    if(answer === true ){
+      
+      
+    }
+  }
 
   return (
     <div className="w-full px-4 py-16">
@@ -11,19 +34,17 @@ const QuizDetails = ({ quiz }) => {
         <RadioGroup>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold">{question}</h3>
-            <div className="flex justify-end p-2">
-              <EyeIcon className="w-8 h-8 hidden"></EyeIcon>
-              <EyeSlashIcon className="w-8 h-8">{correctAnswer}</EyeSlashIcon>
+            <h3 className="text-xl font-semibold text-gray-800">{question}</h3>
+            <div className="flex justify-end p-2" onClick={viewAnswer}>
+              <EyeIcon className="w-8 h-8 text-blue-500 opacity-50 hover:opacity-100" >
+              <p className="text-lg text-blue-800 font-semibold text-right hidden">{correctAnswer}</p></EyeIcon>
             </div>
             <div className=" grid grid-cols-1 gap-3">
-              {options.map((option) => <div key={option.name} className=" flex bg-gray-200 px-9 py-4 rounded font-semibold align-middle text-gray-800 hover:bg-orange-500 hover:text-white duration-700">
-              <div className="">
-              <button className="mr-20" ><input className="w-6 h-6" type="radio" name="option" id="" /></button>
+              {options.map((option) => <div key={option.id} className=" flex bg-gray-200 px-9 py-4 rounded font-semibold align-middle text-gray-800 hover:bg-cyan-300 hover:text-white duration-700">
+              <div className="inline-flex space-x-4" >
+              <input  className="w-6 h-6 hidden" type="radio" name="option" id="" />
+                <label className="text-lg" onClick={selectOption}>{option}</label>
               </div>
-                <div className="">
-                  <p className="text-center ">{option}</p>
-                </div>
               </div>)}
             </div>
           </div>
@@ -33,19 +54,5 @@ const QuizDetails = ({ quiz }) => {
   );
 };
 
-function CheckIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <circle cx={12} cy={12} r={12} fill="#fff" opacity="0.2" />
-      <path
-        d="M7 13l3 3 7-7"
-        stroke="#fff"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export default QuizDetails;

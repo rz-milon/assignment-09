@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <div class="bg-blue-900 fixed top-0 left-0 right-0">
+      <div class="bg-blue-900">
       <div class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div class="relative flex items-center justify-between">
           <Link
@@ -26,7 +26,7 @@ const Header = () => {
               <Link
                 to="/home"
                 aria-label="Home"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300 "
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-400 "
               >
                 Home
               </Link>
@@ -35,7 +35,7 @@ const Header = () => {
               <Link
                 to="/topics"
                 aria-label="Topics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-400"
               >
                 Topics
               </Link>
@@ -44,7 +44,7 @@ const Header = () => {
               <Link
                 to="/statistics"
                 aria-label="Statistics"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-400"
               >
                 Statistics
               </Link>
@@ -53,7 +53,7 @@ const Header = () => {
               <Link
                 to="/blog"
                 aria-label="Blog"
-                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-300"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-300 hover:text-gray-400"
               >
                 Blog
               </Link>
@@ -85,7 +85,7 @@ const Header = () => {
               <div class="absolute top-0 left-0 w-full">
                 <div class="p-5 bg-white border rounded shadow-sm">
                   <div class="flex items-center justify-between mb-4">
-                    <div>
+                    <div className="">
                       <Link
                         to="/home"
                         aria-label="QUIZ HUB"

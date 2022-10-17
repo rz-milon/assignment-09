@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImg from '../layouts/img/education-day.jpg'
+import bannerImg from '../assets/banner.gif'
 
 const Home = () => {
     
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28">
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 md:pt-24 lg:px-8 lg:py-32">
       <div className="grid gap-10 lg:grid-cols-2">
-        <div className="lg:pr-10">
+        <div className="lg:pr-10 lg:pt-16">
           <h5 className="mb-4 text-4xl font-extrabold leading-none">
             More Programing<br className="hidden md:block" />
             Quiz Questions{' '}
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
         </div>
         <div className=''>
-          <img className='object-cover w-full rounded bg-no-repeat shadow-xl shadow-gray-800' src={bannerImg} alt="" />
+          <img className='object-cover w-full  lg:h-4/6 rounded bg-no-repeat shadow-xl shadow-gray-800' src={bannerImg} alt="" />
         </div>
       </div>
     </div>
