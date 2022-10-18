@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 const QuizDetails = ({ quiz }) => {
 
   const { id, options, question, correctAnswer } = quiz;
+
   // console.log(correctAnswer);
 
   const selectOption = (e) =>{
@@ -41,10 +42,12 @@ const QuizDetails = ({ quiz }) => {
             </div>
             <div className=" grid grid-cols-1 gap-3">
               {options.map((option) => <div key={option.id} className=" flex bg-gray-200 px-9 py-4 rounded font-semibold align-middle text-gray-800 hover:bg-cyan-300 hover:text-white duration-700">
-              <div className="inline-flex space-x-4" >
-              <input  className="w-6 h-6 hidden" type="radio" name="option" id="" />
-                <label className="text-lg" onClick={selectOption}>{option}</label>
-              </div>
+              <>
+                <label className="inline-flex space-x-10" >
+                  <input  className="w-5 h-5 " type="radio" name="option" id="" />
+                  <span className="text-lg" onClick={selectOption}>{option}</span>
+                </label>
+              </>
               </div>)}
             </div>
           </div>

@@ -1,9 +1,12 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Link, useLoaderData } from "react-router-dom";
+import ChartDetails from "./ChartDetails";
+
 
 const Topics = () => {
   const data = useLoaderData();
   const topics = data.data;
+  const topicsNameSt = topics.name
 
   return (
     <div className="bg-gray-100">
@@ -29,13 +32,14 @@ const Topics = () => {
               </h3>
               <Link to={`/quiz/${topic.id}`}>
                 {" "}
-                <button className="bg-teal-500 text-lg text-white font-semibold w-full  px-10 rounded hover:bg-blue-500 duration-700 flex justify-between items-center">
+                <button  className="bg-teal-500 text-lg text-white font-semibold w-full  px-10 rounded hover:bg-blue-500 duration-700 flex justify-between items-center">
                   <span className="tracking-wider">Start Quiz</span>
                   <ArrowLongRightIcon className="w-12 h-12"></ArrowLongRightIcon>
                 </button>
               </Link>
             </div>
           ))}
+          <ChartDetails topics={topics}></ChartDetails>
         </div>
       </div>
     </div>

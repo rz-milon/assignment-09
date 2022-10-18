@@ -6,9 +6,9 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <div class="bg-blue-900">
-      <div class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div class="relative flex items-center justify-between">
+      <div class="bg-blue-900 fixed top-0 left-0 right-0 ">
+      <div class="px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
+        <div class="relative flex items-center justify-between ">
           <Link
             to="/home"
             aria-label="QUIZ HUB"

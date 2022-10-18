@@ -9,6 +9,7 @@ import Topics from './components/Topics';
 import Main from './layouts/Main';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ChartDetails from './components/ChartDetails';
 
 
 
