@@ -1,13 +1,12 @@
-import React from "react";
 import { RadioGroup } from "@headlessui/react";
 import { EyeIcon } from "@heroicons/react/24/solid";
 import { toast } from "react-toastify";
 
-const QuizDetails = ({ quiz }) => {
 
+
+
+const QuizDetails = ({quiz}) => {
   const { id, options, question, correctAnswer } = quiz;
-
-  // console.log(correctAnswer);
 
   const selectOption = (e) =>{
     const selectItem = e.target.innerText;
@@ -20,14 +19,14 @@ const QuizDetails = ({ quiz }) => {
     }
   }
 
-  const viewAnswer = () =>{
-    const answer = correctAnswer;
-    // console.log(answer);
-    if(answer === true ){
-      
-      
-    }
-  }
+  // const viewAnswer = (e) =>{
+  //   const view= e.target.innerText;
+  //   view.className='block'
+    
+  //   console.log(view);
+
+    
+  // }
 
   return (
     <div className="w-full px-4 py-16">
@@ -35,16 +34,16 @@ const QuizDetails = ({ quiz }) => {
         <RadioGroup>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800">{question}</h3>
-            <div className="flex justify-end p-2" onClick={viewAnswer}>
-              <EyeIcon className="w-8 h-8 text-blue-500 opacity-50 hover:opacity-100" >
-              <p className="text-lg text-blue-800 font-semibold text-right hidden">{correctAnswer}</p></EyeIcon>
+            <h3 className="text-xl font-semibold text-gray-800 ">{question}</h3>
+            <div className="flex justify-end p-2 cursor-pointer">
+              <p className="text-lg text-blue-800 font-semibold text-right mr-4 hidden" >{correctAnswer} </p>
+              <EyeIcon className="w-8 h-8 text-blue-500 opacity-50 hover:opacity-100" onClick={''}></EyeIcon>
             </div>
             <div className=" grid grid-cols-1 gap-3">
-              {options.map((option) => <div key={option.id} className=" flex bg-gray-200 px-9 py-4 rounded font-semibold align-middle text-gray-800 hover:bg-cyan-300 hover:text-white duration-700">
+              {options.map((option) => <div key={option.name} className=" flex bg-gray-100 px-9 py-4 rounded font-semibold align-middle text-gray-800 hover:bg-cyan-200 hover:text-gray-600 duration-700">
               <>
-                <label className="inline-flex space-x-10" >
-                  <input  className="w-5 h-5 " type="radio" name="option" id="" />
+                <label className="inline-flex items-center space-x-10 cursor-pointer" >
+                  <input  className="w-5 h-5" type="radio" name="option" id="" />
                   <span className="text-lg" onClick={selectOption}>{option}</span>
                 </label>
               </>

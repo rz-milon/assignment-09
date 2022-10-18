@@ -1,12 +1,10 @@
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import { Link, useLoaderData } from "react-router-dom";
-import ChartDetails from "./ChartDetails";
 
 
 const Topics = () => {
   const data = useLoaderData();
   const topics = data.data;
-  const topicsNameSt = topics.name
 
   return (
     <div className="bg-gray-100">
@@ -39,7 +37,6 @@ const Topics = () => {
               </Link>
             </div>
           ))}
-          <ChartDetails topics={topics}></ChartDetails>
         </div>
       </div>
     </div>
